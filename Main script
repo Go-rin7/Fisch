@@ -287,7 +287,7 @@ Notifacation.TextSize = 20.000
 Notifacation.TextWrapped = true
 Notifacation.TextYAlignment = Enum.TextYAlignment.Top
 Notifacation.Visible = false
-Notifacation.Draggable = false
+Notifacation.Draggable = true
 
 Notifacation1.Name = "Notifacation 1"
 Notifacation1.Parent = Notifacation
