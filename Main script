@@ -1,57 +1,35 @@
 -- Sub cho Go rin di
--- Version:beta 1.0
+-- Version:beta 1.1
 
 -- Instances:
 
-local GorinHubFisch = Instance.new("ScreenGui")
-local OpenmenuButton = Instance.new("ImageButton")
-local UICornerButton = Instance.new("UICorner")
+local GorinHub = Instance.new("ScreenGui")
 local Menu = Instance.new("Frame")
 local HubName = Instance.new("TextLabel")
 local Icon1 = Instance.new("ImageLabel")
 local UICorner1 = Instance.new("UICorner")
 local Close = Instance.new("TextButton")
 local MenuHub = Instance.new("ScrollingFrame")
+local HohoHub = Instance.new("TextButton")
 local BananaHub = Instance.new("TextButton")
 local SpeedHub = Instance.new("TextButton")
-local HohoHub = Instance.new("TextButton")
 local CommingSoon = Instance.new("TextLabel")
 local Subtext = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
-local Lockedtext = Instance.new("TextLabel")
 local DestroyGui = Instance.new("TextButton")
 local NameOwner = Instance.new("TextLabel")
+local OpenmenuButton = Instance.new("ImageButton")
+local UICornerButton = Instance.new("UICorner")
 local GameName = Instance.new("TextLabel")
-local Notifacation = Instance.new("TextLabel")
-local Notifacation1 = Instance.new("TextLabel")
-local OkButton = Instance.new("TextButton")
 
 --Properties:
 
-GorinHubFisch.Name = "Go rin Hub Fisch"
-GorinHubFisch.Parent = game.CoreGui
+GorinHub.Name = "Go rin Hub"
+GorinHub.Parent = game.CoreGui
 
-OpenmenuButton.Name = "Open menu Button"
-OpenmenuButton.Parent = GorinHubFisch
-OpenmenuButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OpenmenuButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OpenmenuButton.BorderSizePixel = 0
-OpenmenuButton.Position = UDim2.new(0.0658851415, 0, 0.385992169, 0)
-OpenmenuButton.Size = UDim2.new(0, 50, 0, 50)
-OpenmenuButton.Image = "http://www.roblox.com/asset/?id=112082203484238"
-OpenmenuButton.Visible = true
-OpenmenuButton.Draggable = true
-OpenmenuButton.MouseButton1Up:Connect(function()
-	Menu.Visible = true
-	OpenmenuButton.Visible = false
-end)
-
-UICornerButton.CornerRadius = UDim.new(1, 0)
-UICornerButton.Name = "UICorner Button"
-UICornerButton.Parent = OpenmenuButton
+--Main Menu
 
 Menu.Name = "Menu"
-Menu.Parent = GorinHubFisch
+Menu.Parent = GorinHub
 Menu.BackgroundColor3 = Color3.fromRGB(26, 255, 10)
 Menu.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Menu.BorderSizePixel = 0
@@ -107,6 +85,7 @@ Close.MouseButton1Up:Connect(function()
 	OpenmenuButton.Visible = true
 end)
 
+
 MenuHub.Name = "Menu Hub"
 MenuHub.Parent = Menu
 MenuHub.Active = true
@@ -117,16 +96,35 @@ MenuHub.Position = UDim2.new(0.000504522584, 0, 0.235136986, 0)
 MenuHub.Size = UDim2.new(0, 527, 0, 268)
 MenuHub.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 
+HohoHub.Name = "Hoho Hub"
+HohoHub.Parent = MenuHub
+HohoHub.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+HohoHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HohoHub.BorderSizePixel = 0
+HohoHub.Position = UDim2.new(0.0796963945, 0, 0.0325655416, 0)
+HohoHub.Size = UDim2.new(0, 200, 0, 50)
+HohoHub.Font = Enum.Font.SourceSans
+HohoHub.Text = "Hoho Hub No Key"
+HohoHub.TextColor3 = Color3.fromRGB(0, 255, 8)
+HohoHub.TextScaled = true
+HohoHub.TextSize = 14.000
+HohoHub.TextWrapped = true
+HohoHub.MouseButton1Up:Connect(function()
+	_G.HohoVersion = "v1"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
+end)
+
+
 BananaHub.Name = "Banana Hub"
 BananaHub.Parent = MenuHub
 BananaHub.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 BananaHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
 BananaHub.BorderSizePixel = 0
-BananaHub.Position = UDim2.new(0.0796963945, 0, 0.0325655416, 0)
+BananaHub.Position = UDim2.new(0.538899422, 0, 0.0326052755, 0)
 BananaHub.Size = UDim2.new(0, 200, 0, 50)
 BananaHub.Font = Enum.Font.SourceSans
-BananaHub.Text = "Banana Hub"
-BananaHub.TextColor3 = Color3.fromRGB(0, 255, 8)
+BananaHub.Text = "Redz Hub"
+BananaHub.TextColor3 = Color3.fromRGB(4, 255, 0)
 BananaHub.TextScaled = true
 BananaHub.TextSize = 14.000
 BananaHub.TextWrapped = true
@@ -134,15 +132,15 @@ BananaHub.MouseButton1Up:Connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
 end)
 
-SpeedHub.Name = "Speed Hub"
+SpeedHub.Name = "W-Azure"
 SpeedHub.Parent = MenuHub
 SpeedHub.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 SpeedHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SpeedHub.BorderSizePixel = 0
-SpeedHub.Position = UDim2.new(0.538899422, 0, 0.0326052755, 0)
+SpeedHub.Position = UDim2.new(0.0778816715, 0, 0.154847786, 0)
 SpeedHub.Size = UDim2.new(0, 200, 0, 50)
 SpeedHub.Font = Enum.Font.SourceSans
-SpeedHub.Text = "Speed Hub"
+SpeedHub.Text = "W-Azure Hub"
 SpeedHub.TextColor3 = Color3.fromRGB(4, 255, 0)
 SpeedHub.TextScaled = true
 SpeedHub.TextSize = 14.000
@@ -151,23 +149,6 @@ SpeedHub.MouseButton1Up:Connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
 end)
 
-HohoHub.Name = "Hoho Hub"
-HohoHub.Parent = MenuHub
-HohoHub.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-HohoHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HohoHub.BorderSizePixel = 0
-HohoHub.Position = UDim2.new(0.0778816715, 0, 0.154847786, 0)
-HohoHub.Size = UDim2.new(0, 200, 0, 50)
-HohoHub.Font = Enum.Font.SourceSans
-HohoHub.Text = "Hidden Hub"
-HohoHub.TextColor3 = Color3.fromRGB(4, 255, 0)
-HohoHub.TextScaled = true
-HohoHub.TextSize = 14.000
-HohoHub.TextWrapped = true
-HohoHub.MouseButton1Up:Connect(function()
-	_G.HohoVersion = "v1"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
-end)
 
 CommingSoon.Name = "Comming Soon"
 CommingSoon.Parent = MenuHub
@@ -197,37 +178,6 @@ Subtext.TextScaled = true
 Subtext.TextSize = 14.000
 Subtext.TextWrapped = true
 
-TextButton.Name = "???"
-TextButton.Parent = MenuHub
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.536620855, 0, 0.153870761, 0)
-TextButton.Size = UDim2.new(0, 200, 0, 50)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "???"
-TextButton.TextColor3 = Color3.fromRGB(4, 255, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-TextButton.MouseButton1Up:Connect(function()
-	Notifacation.Visible = true
-end)
-
-Lockedtext.Name = "Locked text"
-Lockedtext.Parent = TextButton
-Lockedtext.BackgroundColor3 = Color3.fromRGB(166, 166, 166)
-Lockedtext.BackgroundTransparency = 0.500
-Lockedtext.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Lockedtext.BorderSizePixel = 0
-Lockedtext.Size = UDim2.new(0, 200, 0, 50)
-Lockedtext.Font = Enum.Font.SourceSans
-Lockedtext.Text = "[Locked]"
-Lockedtext.TextColor3 = Color3.fromRGB(0, 0, 0)
-Lockedtext.TextScaled = true
-Lockedtext.TextSize = 14.000
-Lockedtext.TextWrapped = true
-
 DestroyGui.Name = "Destroy Gui"
 DestroyGui.Parent = Menu
 DestroyGui.BackgroundColor3 = Color3.fromRGB(64, 0, 255)
@@ -241,10 +191,12 @@ DestroyGui.TextColor3 = Color3.fromRGB(0, 0, 0)
 DestroyGui.TextScaled = true
 DestroyGui.TextSize = 14.000
 DestroyGui.TextWrapped = true
-DestrouGui.MouseButton1Up:Connect(function()
+DestroyGui.MouseButton1Up:Connect(function()
 	Menu.Visible = false
 	OpenmenuButton.Visible = false
 end)
+
+
 
 NameOwner.Name = "Name Owner"
 NameOwner.Parent = Menu
@@ -262,6 +214,28 @@ NameOwner.TextSize = 14.000
 NameOwner.TextWrapped = true
 NameOwner.TextXAlignment = Enum.TextXAlignment.Left
 
+--Open menu button
+
+OpenmenuButton.Name = "Open menu Button"
+OpenmenuButton.Parent = GorinHub
+OpenmenuButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenmenuButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenmenuButton.BorderSizePixel = 0
+OpenmenuButton.Position = UDim2.new(0.0658851415, 0, 0.385992169, 0)
+OpenmenuButton.Size = UDim2.new(0, 50, 0, 50)
+OpenmenuButton.Image = "http://www.roblox.com/asset/?id=112082203484238"
+OpenmenuButton.Active = true
+OpenmenuButton.Visible = true
+OpenmenuButton.Draggable = true
+OpenmenuButton.MouseButton1Up:Connect(function()
+	Menu.Visible = true
+	OpenmenuButton.Visible = false
+end)
+
+UICornerButton.CornerRadius = UDim.new(1, 0)
+UICornerButton.Name = "UICorner Button"
+UICornerButton.Parent = OpenmenuButton
+
 GameName.Name = "Game Name"
 GameName.Parent = Menu
 GameName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -276,50 +250,3 @@ GameName.TextColor3 = Color3.fromRGB(0, 0, 0)
 GameName.TextScaled = true
 GameName.TextSize = 14.000
 GameName.TextWrapped = true
-
-Notifacation.Name = "Notifacation"
-Notifacation.Parent = Menu
-Notifacation.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Notifacation.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Notifacation.BorderSizePixel = 0
-Notifacation.Position = UDim2.new(0.958254278, 0, 0.797720909, 0)
-Notifacation.Size = UDim2.new(0, 200, 0, 160)
-Notifacation.Font = Enum.Font.SourceSans
-Notifacation.Text = "Notifacation"
-Notifacation.TextColor3 = Color3.fromRGB(0, 0, 0)
-Notifacation.TextSize = 20.000
-Notifacation.TextWrapped = true
-Notifacation.TextYAlignment = Enum.TextYAlignment.Top
-Notifacation.Visible = false
-Notifacation.Draggable = true
-
-Notifacation1.Name = "Notifacation 1"
-Notifacation1.Parent = Notifacation
-Notifacation1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Notifacation1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Notifacation1.BorderSizePixel = 0
-Notifacation1.Position = UDim2.new(-0.00174560549, 0, 0.185220912, 0)
-Notifacation1.Size = UDim2.new(0, 200, 0, 67)
-Notifacation1.Font = Enum.Font.SourceSans
-Notifacation1.Text = "This script will able on another day"
-Notifacation1.TextColor3 = Color3.fromRGB(0, 0, 0)
-Notifacation1.TextScaled = true
-Notifacation1.TextSize = 14.000
-Notifacation1.TextWrapped = true
-
-OkButton.Name = "Ok Button"
-OkButton.Parent = Notifacation1
-OkButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-OkButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OkButton.BorderSizePixel = 0
-OkButton.Position = UDim2.new(0, 0, 1.19402981, 0)
-OkButton.Size = UDim2.new(0, 200, 0, 50)
-OkButton.Font = Enum.Font.SourceSans
-OkButton.Text = "Ok"
-OkButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-OkButton.TextScaled = true
-OkButton.TextSize = 14.000
-OkButton.TextWrapped = true
-OkButton.MouseButton1Up:Connect(function()
-	Notifacation.Visible = false
-end)
