@@ -241,6 +241,10 @@ DestroyGui.TextColor3 = Color3.fromRGB(0, 0, 0)
 DestroyGui.TextScaled = true
 DestroyGui.TextSize = 14.000
 DestroyGui.TextWrapped = true
+DestrouGui.MouseButton1Up:Connect(function()
+	Menu.Visible = false
+	OpenmenuButton.Visible = false
+end)
 
 NameOwner.Name = "Name Owner"
 NameOwner.Parent = Menu
